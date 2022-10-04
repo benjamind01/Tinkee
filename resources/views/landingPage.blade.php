@@ -2,7 +2,7 @@
 
 @section('content')
 
-<body class="w-full h-screen bg-gradient-to-br from-green-500 via-green-700 to-green-900 flex flex-col">
+<body class="w-full h-screen bg-gradient-to-br from-[#0575E6] via-[#02298A] to-[#021B79] flex flex-col">
     <header class="w-full flex flex-row justify-between items-center px-14 mt-8">
         <div id="logo">
             <h1 class="text-Inter text-white text-2xl font-semibold">Tinkee</h1>
@@ -17,7 +17,7 @@
             </ul>
         </div>
         <div id="signup">
-            <a href="#" class="bg-white text-black text-lg text-Inter py-3 px-6 font-semibold rounded-3xl">Sign Up</a>
+            <a href="/register" class="bg-white text-black text-lg text-Inter py-3 px-6 font-semibold rounded-3xl">Sign Up</a>
         </div>
     </header>
     <div id="main" class="w-full flex flex-col items-center py-32">
@@ -29,8 +29,8 @@
         </div>
         <div class="mt-8">
             <form class="sm:relative flex flex-col sm:flex-row">
-                <input type="text" class="bg-white w-[300px] sm:w-[500px] md:w-[600px] indent-8 py-6 rounded-[50px] focus:outline-none" placeholder="Enter your email">
-                <input type="submit" class=" bg-gradient-to-br from-green-300 via-green-500 to-emerald-700 mt-5 sm:mt-0 sm:absolute sm:right-6 sm:top-4 text-white font-Inter text-[18px] py-1 md:py-2 px-4 rounded-3xl" value="Start for free" >
+                <input type="email" class="bg-white w-[300px] sm:w-[500px] md:w-[600px] indent-8 py-6 rounded-[50px] focus:outline-none" placeholder="Enter your email">
+                <input type="submit" class=" bg-gradient-to-br from-[#0575E6] via-[#02298A] to-[#021B79] mt-5 sm:mt-0 sm:absolute sm:right-6 sm:top-4 text-white font-Inter text-[18px] py-1 md:py-2 px-4 rounded-3xl" value="Start for free" >
             </form>
         </div>
     </div>

@@ -1,9 +1,3 @@
 @tailwind base;
 @tailwind components;
-
-@font-face {
-    font-family: 'Inter';
-    src: local('Roboto'), url(./fonts/Inter.ttf) format('ttf');
-  }
 @tailwind utilities;
-
