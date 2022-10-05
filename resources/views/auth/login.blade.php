@@ -32,6 +32,8 @@
                                     name="password"
                                     placeholder="Password" />
                 </div>
+
+                <p class="text-red-500 mt-2">@foreach ($errors->all() as $error) {{$error}} @endforeach</p>
             
                 <input type="submit" class="mt-8 bg-[#0575E6] mx-auto w-[200px] py-3 rounded-3xl text-white" value="Log In">
             </form>
