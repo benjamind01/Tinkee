@@ -21,6 +21,9 @@ Route::get('/', function () {
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get('/dashboard/add', [DashboardController::class, 'add'])->middleware(['auth', 'verified'])->name('dashboard.add');
+
+
 Route::get('/profile/{name}', [UserController::class, 'index'])->name('user.index');
 
 require __DIR__.'/auth.php';

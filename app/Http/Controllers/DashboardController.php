@@ -15,4 +15,10 @@ class DashboardController extends Controller
 
         return view('Dashboard', ['links' => $links]);
     }
+
+    public function add() {
+
+        return view('DashboardAdd');
+
+    }
 }
