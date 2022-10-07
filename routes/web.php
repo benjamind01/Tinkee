@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\LinkController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +24,7 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['au
 
 Route::get('/dashboard/add', [DashboardController::class, 'add'])->middleware(['auth', 'verified'])->name('dashboard.add');
 
+Route::post('/links/store', [LinkController::class, 'store'])->middleware(['auth', 'verified']);
 
 Route::get('/profile/{name}', [UserController::class, 'index'])->name('user.index');
 

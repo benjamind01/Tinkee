@@ -12,4 +12,10 @@ class Link extends Model
     public function user() {
         $this->belongsTo(User::class);
     }
+
+    protected $fillable = [
+        'nom',
+        'url',
+        'user_id',
+    ];
 }
