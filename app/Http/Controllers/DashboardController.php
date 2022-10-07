@@ -21,4 +21,20 @@ class DashboardController extends Controller
         return view('DashboardAdd');
 
     }
+
+    public function modify($id) {
+        $link = Link::where('id', $id)->get();
+
+        if($link->isEmpty() == true) {
+            abort('404');
+        }
+
+        if($link->first()->user_id != Auth::user()->id) {
+            abort('401');
+        }
+
+        return view('dashboardModify', ['link' => $link->first()]);
+
+        
+    }
 }

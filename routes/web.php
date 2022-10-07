@@ -23,8 +23,10 @@ Route::get('/', function () {
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/dashboard/add', [DashboardController::class, 'add'])->middleware(['auth', 'verified'])->name('dashboard.add');
+Route::get('/dashboard/modify/{id}', [DashboardController::class, 'modify'])->middleware(['auth', 'verified'])->name('dashboard.modify');
 
 Route::post('/links/store', [LinkController::class, 'store'])->middleware(['auth', 'verified']);
+Route::post('/links/modify/{id}', [LinkController::class, 'modify'])->middleware(['auth', 'verified']);
 
 Route::get('/profile/{name}', [UserController::class, 'index'])->name('user.index');
 

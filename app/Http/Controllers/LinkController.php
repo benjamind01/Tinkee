@@ -22,7 +22,26 @@ class LinkController extends Controller
         ]);
 
         return redirect('/dashboard');
+    }
 
+    public function modify(Request $request, $id) {
+        $link = Link::where('id', $id);
 
+        if($link->get()->isEmpty() == true) {
+            abort('404');
+        }
+
+        if($link->get()->first()->user_id != Auth::user()->id) {
+            abort('401');
+        }
+
+        $validated = $request->validate([
+            'name' => 'required|min:2',
+            'link' => 'required|min:3|url'
+        ]);
+
+        $link->update(['nom' => $request->name, 'url' => $request->link]);
+
+        return redirect('/dashboard');
     }
 }
