@@ -44,4 +44,20 @@ class LinkController extends Controller
 
         return redirect('/dashboard');
     }
+
+    public function delete(Request $request, $id) {
+        $link = Link::where('id', $id);
+
+        if($link->get()->isEmpty() == true) {
+            abort('404');
+        }
+
+        if($link->get()->first()->user_id != Auth::user()->id) {
+            abort('401');
+        }
+
+        $link->delete();
+
+        return redirect('/dashboard');
+    }
 }

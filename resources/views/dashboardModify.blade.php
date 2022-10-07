@@ -18,7 +18,7 @@
                 <label for="link" class="block mb-2 text-sm font-medium text-gray-900">Lien :</label>
                 <input type="text" name="link" id="link" class=" w-[400px] bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5" placeholder="Lien" value="{{ $link->url }}">
             </div>
-            <a href="#" class="text-red-500 mt-4 hover:border-b-[1px] border-red-500">Supprimer ce lien</a>
+            <form method="POST" action="/links/delete/{{ $link->id }}"> @csrf <input type=submit href="#" class="text-red-500 mt-4 cursor-pointer border-red-500" value="Supprimer ce lien"></form>
             <div class="w-[400px] mt-4 flex justify-center items-center">
             <button type="submit" class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
                 Modifer
