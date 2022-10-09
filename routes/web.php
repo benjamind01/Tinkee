@@ -27,7 +27,7 @@ Route::get('/dashboard/modify/{id}', [DashboardController::class, 'modify'])->mi
 
 Route::post('/links/store', [LinkController::class, 'store'])->middleware(['auth', 'verified']);
 Route::post('/links/modify/{id}', [LinkController::class, 'modify'])->middleware(['auth', 'verified']);
-Route::post('/links/modify/{id}', [LinkController::class, 'delete'])->middleware(['auth', 'verified']);
+Route::post('/links/delete/{id}', [LinkController::class, 'delete'])->middleware(['auth', 'verified']);
 
 Route::get('/profile/{name}', [UserController::class, 'index'])->name('user.index');
 

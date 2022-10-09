@@ -25,6 +25,7 @@ class LinkController extends Controller
     }
 
     public function modify(Request $request, $id) {
+
         $link = Link::where('id', $id);
 
         if($link->get()->isEmpty() == true) {
