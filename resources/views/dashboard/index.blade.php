@@ -10,7 +10,7 @@
         <img src="/pp.png" class="w-28 h-328" />
         <a href="/profil/{{Auth::user()->name }}"><h2 class="mt-4 mb-6 text-xl font-Inter font-semibold">@ {{Auth::user()->name }}</h2></a>
         @foreach($links as $link)
-        <a href="/dashboard/modify/{{ $link->id }}" class="bg-white text-center w-[450px] py-3 mt-6">
+        <a href="/dashboard/modify/{{ $link->id }}" class="bg-white text-center w-[450px] py-3 mt-6 hover:py-4 hover:w-[500px] transition-all font-semibold">
                 {{ $link->nom }}
         </a>
         @endforeach
