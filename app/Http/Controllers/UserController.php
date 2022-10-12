@@ -16,6 +16,10 @@ class UserController extends Controller
             abort('404');
         }
 
+        $user->views += 1;
+
+        $user->update();
+
         $links = Link::where('user_id', $user->id)->get();
         
         return view('profile', ["links" => $links, "user" => $user]);
