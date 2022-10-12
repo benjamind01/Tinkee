@@ -13,12 +13,12 @@ class DashboardController extends Controller
         $links = Link::where('user_id', Auth::user()->id)->get();
 
 
-        return view('Dashboard', ['links' => $links]);
+        return view('dashboard.index', ['links' => $links]);
     }
 
     public function add() {
 
-        return view('DashboardAdd');
+        return view('dashboard.add');
 
     }
 
@@ -33,7 +33,7 @@ class DashboardController extends Controller
             abort('401');
         }
 
-        return view('dashboardModify', ['link' => $link->first()]);
+        return view('dashboard.edit', ['link' => $link->first()]);
 
         
     }

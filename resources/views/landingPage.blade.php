@@ -28,7 +28,7 @@
             <p class="text-white font-Inter text-center text-[16px] sm:text-[18px] md:text-[20px]">Links all your accounts on the same page to help people<br/>to find your everywhere on the internet.</p>
         </div>
         <div class="mt-8">
-            <form class="sm:relative flex flex-col sm:flex-row">
+            <form class="sm:relative flex flex-col sm:flex-row" method="GET" action="/register">
                 <input type="email" class="bg-white w-[300px] sm:w-[500px] md:w-[600px] indent-8 py-6 rounded-[50px] focus:outline-none" placeholder="Enter your email">
                 <input type="submit" class=" bg-gradient-to-br from-[#0575E6] via-[#02298A] to-[#021B79] mt-5 sm:mt-0 sm:absolute sm:right-6 sm:top-4 text-white font-Inter text-[18px] py-1 md:py-2 px-4 rounded-3xl" value="Start for free" >
             </form>
