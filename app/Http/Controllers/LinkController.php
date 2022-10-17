@@ -47,6 +47,7 @@ class LinkController extends Controller
     }
 
     public function delete(Request $request, $id) {
+        
         $link = Link::where('id', $id);
 
         if($link->get()->isEmpty() == true) {
@@ -56,8 +57,12 @@ class LinkController extends Controller
         if($link->get()->first()->user_id != Auth::user()->id) {
             abort('401');
         }
-
+        
         $link->delete();
+
+        
+
+
 
         return redirect('/dashboard');
     }

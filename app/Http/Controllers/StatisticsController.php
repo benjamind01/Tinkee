@@ -12,6 +12,13 @@ class StatisticsController extends Controller
         $user = User::where('name', Auth::user()->name)->get();
         $user = $user[0];
 
-        return view('/statistics', ['user' => $user]);
+        $totalClicks = 0;
+
+        foreach($user->links as $link) {
+            $totalClicks += $link->clicks;
+        }
+
+
+        return view('/statistics', ['user' => $user, 'totalClicks' => $totalClicks]);
     }
 }
