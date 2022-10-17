@@ -32,6 +32,7 @@ Route::get('/statistics', [StatisticsController::class, 'index'])->middleware(['
 Route::get('/settings', [SettingsController::class, 'index'])->middleware(['auth', 'verified'])->name('settings.index');
 Route::post('/settings/modify', [SettingsController::class, 'modify'])->middleware(['auth', 'verified'])->name('settings.modify');
 
+Route::get('/links/show/id', [LinkController::class, 'show'])->name('click');
 Route::post('/links/store', [LinkController::class, 'store'])->middleware(['auth', 'verified']);
 Route::post('/links/modify/{id}', [LinkController::class, 'modify'])->middleware(['auth', 'verified']);
 Route::post('/links/delete/{id}', [LinkController::class, 'delete'])->middleware(['auth', 'verified']);
