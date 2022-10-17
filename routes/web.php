@@ -1,10 +1,12 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserController;
-use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LinkController;
+use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\Redirect;
 use App\Http\Controllers\SettingsController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\StatisticsController;
 
 /*
@@ -19,11 +21,16 @@ use App\Http\Controllers\StatisticsController;
 */
 
 Route::get('/', function () {
-    return view('landingPage');
+    if(!Auth::guest()) {
+        return Redirect::to('dashboard');
+    }
+    else {
+        return view('landingPage');
+    }
+    
 });
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
-
 Route::get('/dashboard/add', [DashboardController::class, 'add'])->middleware(['auth', 'verified'])->name('dashboard.add');
 Route::get('/dashboard/modify/{id}', [DashboardController::class, 'modify'])->middleware(['auth', 'verified'])->name('dashboard.modify');
 
