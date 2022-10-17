@@ -1,33 +1,39 @@
-<div id="header" class="w-1/12">
-    <div class="w-full h-full flex flex-col justify-between items-center py-12">
-        <div> 
-            <h1 class="text-Inter text-black text-2xl font-semibold">Tinkee</h1>
-        </div>
-        <div>
-        <a href="/dashboard"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mb-6 @php if($page == "dashboard") { echo 'bg-blue-500 py-2 px-2 rounded-md text-white w-12 h-12'; } else { echo 'w-10 h-10 hover:text-gray-500'; } @endphp">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-          </svg></a>
-          <a href="/statistics"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mb-6 @php if($page == "statistics") { echo 'bg-blue-500 py-2 px-2 rounded-md text-white w-12 h-12'; } else { echo 'w-10 h-10 hover:text-gray-500'; } @endphp">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
-            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
-          </svg></a>
-          
-         <a href="/settings"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="@php if($page == "settings") { echo 'bg-blue-500 py-2 px-2 rounded-md text-white w-12 h-12'; } else { echo 'w-10 h-10 hover:text-gray-500'; } @endphp  mb-5  ">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z" />
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-          </svg></a>
-          
-          
-        <form method="POST" action="{{ route('logout') }}">
-        @csrf
-        <a href="/logout" onclick="event.preventDefault();
-        this.closest('form').submit();"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 hover:text-gray-500 text-black rounded-xl px-1 py-1">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75" />
-          </svg>
-        </a>
-        </form>
-        </div>
-        <div> 
-        </div>
-    </div>
+<div class="flex flex-col items-center w-60 h-full overflow-hidden text-gray-400 bg-gray-900">
+   <a class="flex items-center w-full px-3 mt-3" href="#">
+      <svg class="w-8 h-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+         <path d="M11 17a1 1 0 001.447.894l4-2A1 1 0 0017 15V9.236a1 1 0 00-1.447-.894l-4 2a1 1 0 00-.553.894V17zM15.211 6.276a1 1 0 000-1.788l-4.764-2.382a1 1 0 00-.894 0L4.789 4.488a1 1 0 000 1.788l4.764 2.382a1 1 0 00.894 0l4.764-2.382zM4.447 8.342A1 1 0 003 9.236V15a1 1 0 00.553.894l4 2A1 1 0 009 17v-5.764a1 1 0 00-.553-.894l-4-2z" />
+      </svg>
+      <span class="ml-2 text-sm font-bold">Tinkee</span>
+   </a>
+   <div class="w-full px-2">
+      <div class="flex flex-col items-center w-full mt-3 border-t border-gray-700">
+         <a class="flex items-center w-full h-12 px-3 mt-2 rounded @php if($page == "dashboard") { echo 'bg-gray-700 text-white'; } else { echo 'hover:bg-gray-700 hover:text-gray-300'; } @endphp"  href="{{ route('dashboard') }}">
+            <svg class="w-6 h-6 stroke-current" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+            </svg>
+            <span class="ml-2 text-sm font-medium">Dashboard</span>
+         </a>
+         <a class="flex items-center w-full h-12 px-3 mt-2 rounded @php if($page == "statistics") { echo 'bg-gray-700 text-white'; } else { echo 'hover:bg-gray-700 hover:text-gray-300'; } @endphp" href="{{ route('statistics.index') }}">
+            <svg class="w-6 h-6 stroke-current" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            <span class="ml-2 text-sm font-medium">Insights</span>
+         </a>
+         <a class="flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-gray-700 hover:text-gray-300" href="#">
+            <svg class="w-6 h-6 stroke-current" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2" />
+            </svg>
+            <span class="ml-2 text-sm font-medium">Help</span>
+         </a>
+      </div>
+      <div class="flex flex-col items-center w-full mt-2 border-t border-gray-700">
+         <a class="flex items-center w-full h-12 px-3 mt-2 rounded @php if($page == "settings") { echo 'bg-gray-700 text-white'; } else { echo 'hover:bg-gray-700 hover:text-gray-300'; } @endphp" href="{{ route('settings.index') }}">
+            <svg class="w-6 h-6 stroke-current"  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+            </svg>
+            <span class="ml-2 text-sm font-medium">Settings</span>
+         </a>
+      </div>
+   </div>
 </div>
+<!-- Component End  -->
