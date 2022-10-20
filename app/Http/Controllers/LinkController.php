@@ -24,8 +24,10 @@ class LinkController extends Controller
         return redirect('/dashboard');
     }
 
-    public function show(Link $l) {
-        $link = $l->get()[0];
+    public function show($id) {
+
+        $link = Link::where('id', $id)->get()[0];
+
 
         $link->clicks++;
         $link->update();
